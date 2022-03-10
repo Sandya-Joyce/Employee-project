@@ -60,33 +60,7 @@ namespace Employee
             hr.SalaryPayout();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
-
 
 
 
