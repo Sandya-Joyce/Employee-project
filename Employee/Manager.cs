@@ -12,8 +12,8 @@ namespace Employee
         {
            
 
-            var Salary = 50000;
-            var Bonus = 6000;
+           var Salary = 50000;
+           var Bonus = 6000;
 
              var TotalSalary = Salary + Bonus;
             Console.WriteLine("The Total Salary of the Manager is "+TotalSalary);

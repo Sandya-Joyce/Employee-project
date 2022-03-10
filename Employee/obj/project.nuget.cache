@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "HJxEk3uPu39vNOtKemh5tx/XC5XnKjr4DDqmV5PLxCgRAsQB7UMf1INpen864mmgO3lktwN4RUl0Q6lF/1sC1A==",
+  "dgSpecHash": "cxjIxCtjFpK4N/gyqUm5so33Y0zkw32v3dwZj1amdsz/yTtiinojiT5L7lnPVJvFxi67+pUEt8P1zeL01VlR0g==",
   "success": true,
   "projectFilePath": "C:\\Sandya\\EmployeeProject\\Employee-project\\Employee\\Employee.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Sandya.dasari\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.14\\microsoft.netcore.app.host.win-x64.5.0.14.nupkg.sha512"
+  ],
   "logs": []
 }

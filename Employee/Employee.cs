@@ -8,79 +8,102 @@ namespace Employee
 {
     public class Employee
     {
-        //Id, Name, UserName, Designation, Purse
+
         public int Id { get; set; }
         public string Name { get; set; }
-        public string UserName { get; set; }
-        public string Designation { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Designation { get; set; }      
+        
+        public int Purse = 0;
+        public int Counter { get; set; } = 100;
 
-        public int Purse { get; set; }
 
 
-
-
-        public Employee(int id , string firstname , string lastname , string designation)
+        public Employee(string firstname, string lastname, string designation)
         {
-            Id = id;
-            var counter = Id;
-            Id=counter+1;
-           // Id=new Employee(counter, firstname , lastname , designation);
-           
 
-            UserName= firstname + " " + lastname+ "_"+id;
-            Console.WriteLine(UserName);
-            
-            
+            Counter = Counter + 1;
+            Id = Counter;
 
-           Designation = designation;
-            if(designation=="C1")
+
+
+            var UserName = firstname + " " + lastname + "_" + Id;
+            Console.WriteLine("UserName:" + UserName);
+
+
+
+
+
+            Designation = designation;
+            if (String.IsNullOrEmpty(designation))
+            {
+                Console.WriteLine("Designation couldn't be Empty");
+            }
+
+            else if (designation == "C1")
             {
                 Purse = 1000;
-               
+                Console.WriteLine("The Amount of C1 role " + Purse);
+
 
             }
-            else if (designation=="C2")
+            else if (designation == "C2")
             {
                 Purse = 2000;
-                Console.WriteLine(Purse);
+                Console.WriteLine("The Amount of C2 role " + Purse);
             }
-            else if(designation=="C3")
+            else if (designation == "C3")
             {
                 Purse = 3000;
-                Console.WriteLine (Purse);
-            }          
+                Console.WriteLine("The Amount of C3 role " + Purse);
+            }
+            else
+            {
+                Console.WriteLine("Invalid Designation");
+            }
 
         }
 
-        public Employee( )
+        internal void SubractAmountFromPurse()
         {
-          
+            throw new NotImplementedException();
+        }
+
+        internal void AddAmountToPurse()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Employee()
+        {
+        }
+
+
+        private string addAmount;
+        public Employee(string addAmount)
+        {
+            this.addAmount = addAmount;
         }
 
         public void AddAmountToPurse(int AddAmount)
         {
-            if (AddAmount > 0)
+            
+            if (AddAmount>0)
             {
-
 
                 Purse = Purse + AddAmount;
-
-                
-                   
-                Console.WriteLine("The Total Amount After adding is "+Purse);
+                Console.WriteLine("The Total Amount After adding is " +Purse);
 
             }
-            else
-            {
-                Console.WriteLine("Invalid Amount");
-            }
-           
+            
         }
-        public void SubractAmountFromPurse(int SubractAmount)
+        public void SubractAmountFromPurse(int SubstractAmount)
         {
-            if (SubractAmount < Purse)
-            {
-                Purse = Purse - SubractAmount;
+           
+            if (SubstractAmount < Purse)
+            { 
+                Purse = Purse - SubstractAmount;
                 Console.WriteLine("Your Balance Amount is "+Purse);
                  }
             else
@@ -92,22 +115,21 @@ namespace Employee
         }
 
 
-        //Polymorphism
+        
 
         public int Salary = 0;
         public int Bonus = 0;
+        
+
         public virtual void SalaryPayout()
         {
             //default Implementation
-            if (Salary > 0 && Bonus>=0)
+            if (Salary >=0 && Bonus>=0)
             {
                Console.WriteLine("The Salary is");
             }
-            else
-            {
-                Console.WriteLine("Invalid Amount");
-            }
 
+           
 
         }
 
